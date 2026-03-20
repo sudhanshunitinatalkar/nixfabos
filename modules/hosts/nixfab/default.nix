@@ -7,6 +7,9 @@
       config.flake.nixosModules.nixfabos
       config.flake.nixosModules.rpi02w_dto
       config.flake.nixosModules.mac-style-plymouth      
+      config.flake.nixosModules.klipper
+      config.flake.nixosModules.moonraker
+      config.flake.nixosModules.mainsail
     ];
   };
 }

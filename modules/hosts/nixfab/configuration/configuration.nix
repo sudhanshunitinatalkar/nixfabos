@@ -76,7 +76,7 @@
       gptfdisk
       htop
       pciutils
-      home-manager
+      i2c-tools
     ];
 
     i18n.defaultLocale = "en_US.UTF-8";
