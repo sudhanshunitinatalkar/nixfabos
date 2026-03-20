@@ -1,9 +1,10 @@
 { inputs, config, ... }: 
 {
-  flake.nixosConfigurations."cosmoslaptop" = inputs.nixpkgs.lib.nixosSystem {
-    system = "x86_64-linux";
+  flake.nixosConfigurations."nixfabos" = inputs.nixpkgs.lib.nixosSystem {
+    system = "aarch64-linux";
     specialArgs = { inherit inputs; };
     modules = [
+      "${inputs.nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
       config.flake.nixosModules.nixfabos
       config.flake.nixosModules.rpi02w_dto
       config.flake.nixosModules.mac-style-plymouth      

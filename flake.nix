@@ -20,7 +20,7 @@
       url = "github:SergioRibera/s4rchiso-plymouth-theme";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
   };
 
   outputs = inputs:
@@ -33,7 +33,7 @@
       ];
       imports = [
         (inputs.import-tree ./modules)
-        inputs.home-manager.flakeModules.home-manager   
+        # inputs.home-manager.flakeModules.home-manager   
       ];
     };
 }

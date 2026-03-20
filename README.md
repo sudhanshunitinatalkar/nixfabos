@@ -4,7 +4,7 @@ Nix Based Fabricaction Operating System (currently focusing on 3d pritners, prog
 ## command to print file content of this project
 
 ```bash
-find . -type f -not -path '*/\.*' -not -name 'flake.lock' -not -iname 'license*' -print0 \
+find . -type f -not -path '*/\.*' -not -name 'flake.lock' -not -iname 'LICENSE*' -print0 \
   | while IFS= read -r -d '' file; do
       echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
       echo "┃  $file"
@@ -15,3 +15,6 @@ find . -type f -not -path '*/\.*' -not -name 'flake.lock' -not -iname 'license*'
       echo ""
     done
 ```
+
+
+nix build .#nixosConfigurations.nixosfab.config.system.build.sdImage
